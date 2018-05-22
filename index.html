@@ -1,15 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -33,36 +49,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -71,34 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
-<meta name="description" content="对所做的事情理解越深，你就会做的越好。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="weisnc">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="weisnc">
-<meta property="og:description" content="对所做的事情理解越深，你就会做的越好。">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="weisnc">
-<meta name="twitter:description" content="对所做的事情理解越深，你就会做的越好。">
+
+
+
 
 
 
@@ -107,13 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -125,19 +103,40 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
+  
 
 
 
+
+  <meta name="description" content="对所做的事情理解越深，你就会做的越好。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="weisnc">
+<meta property="og:url" content="http://weisnc.com/index.html">
+<meta property="og:site_name" content="weisnc">
+<meta property="og:description" content="对所做的事情理解越深，你就会做的越好。">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="weisnc">
+<meta name="twitter:description" content="对所做的事情理解越深，你就会做的越好。">
+
+
+
+
+
+
+  <link rel="canonical" href="http://weisnc.com/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>weisnc</title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
+
 
 
 
@@ -156,11 +155,36 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
+</head>
 
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -168,8 +192,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -178,19 +201,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">weisnc</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -198,45 +219,34 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -244,12 +254,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -262,12 +283,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/22/philosophy_16_question/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/12/22/philosophy_16_question/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -282,11 +309,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/12/22/philosophy_16_question/" itemprop="url">哲学16问</a></h1>
+                <a class="post-title-link" href="/2016/12/22/philosophy_16_question/" itemprop="url">
+                  哲学16问
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -294,13 +331,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-22T09:35:14+08:00">
-                2016-12-22
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-12-22 09:35:14" itemprop="dateCreated datePublished" datetime="2016-12-22T09:35:14+08:00">2016-12-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-22 10:23:40" itemprop="dateModified" datetime="2018-05-22T10:23:40+08:00">2018-05-22</time>
+              
             
           </span>
 
@@ -314,6 +368,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/12/22/philosophy_16_question/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/12/22/philosophy_16_question/" itemprop="commentCount"></span>
                 </a>
@@ -334,6 +389,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -425,17 +483,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -449,6 +507,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -461,12 +523,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/bitcoin-reward/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/12/21/bitcoin-reward/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -481,11 +549,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/12/21/bitcoin-reward/" itemprop="url">next主题增加比特币赞赏</a></h1>
+                <a class="post-title-link" href="/2016/12/21/bitcoin-reward/" itemprop="url">
+                  next主题增加比特币赞赏
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -493,11 +571,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-21T14:33:30+08:00">
-                2016-12-21
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2016-12-21 14:33:30" itemprop="dateCreated datePublished" datetime="2016-12-21T14:33:30+08:00">2016-12-21</time>
             
 
             
@@ -513,6 +592,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/12/21/bitcoin-reward/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/12/21/bitcoin-reward/" itemprop="commentCount"></span>
                 </a>
@@ -533,6 +613,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -542,29 +625,29 @@
         
           
             <h2 id="为hexo博客增加赞赏功能"><a href="#为hexo博客增加赞赏功能" class="headerlink" title="为hexo博客增加赞赏功能"></a>为hexo博客增加赞赏功能</h2><ul>
-<li>next主题各种设置，包括赞赏: <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">http://theme-next.iissnan.com/theme-settings.html</a></li>
-<li>赞赏功能贡献者@habren的原帖: <a href="https://github.com/iissnan/hexo-theme-next/pull/687" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next/pull/687</a></li>
+<li>next主题各种设置，包括赞赏: <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/theme-settings.html</a></li>
+<li>赞赏功能贡献者@habren的原帖: <a href="https://github.com/iissnan/hexo-theme-next/pull/687" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/pull/687</a></li>
 </ul>
 <h2 id="为hexo博客增加比特币赞赏功能"><a href="#为hexo博客增加比特币赞赏功能" class="headerlink" title="为hexo博客增加比特币赞赏功能"></a>为hexo博客增加比特币赞赏功能</h2><p>原赞赏功能只提供了微xin赞赏和支付鸨赞赏，现在告诉你怎样添加比特币赞赏。</p>
 <h3 id="原始赞赏样式"><a href="#原始赞赏样式" class="headerlink" title="原始赞赏样式"></a>原始赞赏样式</h3><p><img src="/images/cus/oldreward.png" alt="原始的赞赏样子"></p>
 <h3 id="现在赞赏样式"><a href="#现在赞赏样式" class="headerlink" title="现在赞赏样式"></a>现在赞赏样式</h3><p><img src="/images/cus/newreward.png" alt="现在的赞赏样子"></p>
 <h3 id="具体修改方法"><a href="#具体修改方法" class="headerlink" title="具体修改方法"></a>具体修改方法</h3><ol>
-<li>修改文件： 博客根目录/themes/next/_config.yml<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">reward_comment: 您的支持将鼓励我继续创作！</div><div class="line">wechatpay: /uploads/weixinpay.png</div><div class="line">alipay: /uploads/alipay.png</div><div class="line">bitcoin: /uploads/bitcoin.png    <span class="comment">#新增</span></div></pre></td></tr></table></figure>
+<li>修改文件： 博客根目录/themes/next/_config.yml<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">reward_comment: 您的支持将鼓励我继续创作！</span><br><span class="line">wechatpay: /uploads/weixinpay.png</span><br><span class="line">alipay: /uploads/alipay.png</span><br><span class="line">bitcoin: /uploads/bitcoin.png    <span class="comment">#新增</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>比特币赞赏的二维码使用Bitcoin钱包手机客户端，“索取比特币”的二维码就行</p>
 <ol>
 <li><p>修改文件： 博客根目录/themes/next/layout/_macro/reward.swig<br>在theme.alipay下新增：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  ...</div><div class="line">&#123;% endif %&#125;</div><div class="line"><span class="comment">&lt;!--以下为新增内容--&gt;</span></div><div class="line">&#123;% if theme.bitcoin %&#125;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"bitcoin"</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"bitcoin_qr"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.bitcoin &#125;&#125;"</span> <span class="attr">alt</span>=<span class="string">"&#123;&#123; theme.author &#125;&#125; Bitcoin"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Bitcoin赞赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&#123;% endif %&#125;</div><div class="line"><span class="comment">&lt;!--以上为新增内容--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  ...</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"><span class="comment">&lt;!--以下为新增内容--&gt;</span></span><br><span class="line">&#123;% if theme.bitcoin %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"bitcoin"</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"bitcoin_qr"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.bitcoin &#125;&#125;"</span> <span class="attr">alt</span>=<span class="string">"&#123;&#123; theme.author &#125;&#125; Bitcoin"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Bitcoin赞赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"><span class="comment">&lt;!--以上为新增内容--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改文件： 博客根目录themes/next/source/css/_common/components/post/post.styl<br>最后一行末尾添加 or hexo-config(‘bitcoin’),如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@import &quot;post-reward&quot; if hexo-config(&apos;alipay&apos;) or hexo-config(&apos;wechatpay&apos;) or hexo-config(&apos;bitcoin&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;post-reward&quot; if hexo-config(&apos;alipay&apos;) or hexo-config(&apos;wechatpay&apos;) or hexo-config(&apos;bitcoin&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改文件： 博客根目录public/css/main.css<br>#alipay:hover p 样式下面新增</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#bitcoin</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">  <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">  <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#bitcoin</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">  <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改文件： 博客根目录themes/next/source/css/_common/components/post/post-reward.styl<br>#alipay:hover p 样式下面新增</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#bitcoin</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span>&#123;</div><div class="line">    <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">    <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">    <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#bitcoin</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>增加比特币赞赏完成，其他赞赏同理。</p>
@@ -575,17 +658,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -599,6 +682,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -611,12 +698,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/17/be-enterprising-declaration/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/11/17/be-enterprising-declaration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -631,11 +724,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/11/17/be-enterprising-declaration/" itemprop="url">进取型人格宣言</a></h1>
+                <a class="post-title-link" href="/2016/11/17/be-enterprising-declaration/" itemprop="url">
+                  进取型人格宣言
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -643,11 +746,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-17T12:13:42+08:00">
-                2016-11-17
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2016-11-17 12:13:42" itemprop="dateCreated datePublished" datetime="2016-11-17T12:13:42+08:00">2016-11-17</time>
             
 
             
@@ -663,6 +767,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/11/17/be-enterprising-declaration/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/11/17/be-enterprising-declaration/" itemprop="commentCount"></span>
                 </a>
@@ -683,6 +788,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -719,17 +827,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -743,6 +851,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -755,12 +867,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/08/for-my-wife-first/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/11/08/for-my-wife-first/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -775,11 +893,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/11/08/for-my-wife-first/" itemprop="url">与你共同成长</a></h1>
+                <a class="post-title-link" href="/2016/11/08/for-my-wife-first/" itemprop="url">
+                  与你共同成长
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -787,13 +915,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-08T16:00:01+08:00">
-                2016-11-08
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-11-08 16:00:01" itemprop="dateCreated datePublished" datetime="2016-11-08T16:00:01+08:00">2016-11-08</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-15 17:28:18" itemprop="dateModified" datetime="2016-11-15T17:28:18+08:00">2016-11-15</time>
+              
             
           </span>
 
@@ -807,6 +952,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/11/08/for-my-wife-first/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/11/08/for-my-wife-first/" itemprop="commentCount"></span>
                 </a>
@@ -827,6 +973,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -837,38 +986,38 @@
           
             <p>近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化：</p>
 <h4 id="比如说“学习”"><a href="#比如说“学习”" class="headerlink" title="比如说“学习”"></a><strong>比如说“学习”</strong></h4><p>之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，才能学到更多的技能，掌握处理事情的方法论，完善自身的价值观，重新认识这个世界，摆脱浑浑噩噩的人生。这样人活着才有意义，否则，那和一只猴子有什么区别？</p>
-<p>参考：<br><a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter4.html" target="_blank" rel="external">《学习》</a><br><a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A24.html" target="_blank" rel="external">《为什么一定要自学？》</a></p>
+<p>参考：<br><a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter4.html" target="_blank" rel="noopener">《学习》</a><br><a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A24.html" target="_blank" rel="noopener">《为什么一定要自学？》</a></p>
 <h4 id="比如说“财富”"><a href="#比如说“财富”" class="headerlink" title="比如说“财富”"></a><strong>比如说“财富”</strong></h4><p>一个人最宝贵的财富是什么？是“注意力”。什么是财富我之前根本没思考过，以至于我有自我意识的二十五年来，浪费了无数的财富：玩游戏、看新闻、凑热闹、随大流、操别人的心……浪费的这些“注意力”要是全花费在自己身上，关注自身的成长，可能我们的生活比现在过得还要好吧。不过，现在也不晚，以后还有很长的路要走。</p>
 <h4 id="再比如说“阅读”"><a href="#再比如说“阅读”" class="headerlink" title="再比如说“阅读”"></a><strong>再比如说“阅读”</strong></h4><p>一个人大部分的知识都是通过阅读得来的。可以说是一个人成长的必要技能。如果一个家里书比较多，而且父母都是爱读书的人，那么小孩往往也爱读书，他将来成材的几率就会很大。孩子是父母的镜像，父母是什么样的人，孩子就更倾向于变成什么样的人。没必要要求孩子怎么样，要求孩子的同时，想一想我们做到了没有？如果没做到，我们先做到了再说，要成为孩子的榜样。所以，这就是我为什么要让我们阅读，不光是为了我们自己，更是为了孩子。</p>
 <p>还有:</p>
 <ul>
-<li><p><strong>“元认知能力”<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter1.html" target="_blank" rel="external">《醒悟》</a></strong></p>
+<li><p><strong>“元认知能力”<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter1.html" target="_blank" rel="noopener">《醒悟》</a></strong></p>
 </li>
-<li><p><strong>“概念”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A10.html" target="_blank" rel="external">《概念是一切知识的基石》</a></strong></p>
+<li><p><strong>“概念”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A10.html" target="_blank" rel="noopener">《概念是一切知识的基石》</a></strong></p>
 </li>
-<li><p><strong>“时间”：<a href="http://www.zhibimo.com/books/xiaolai/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当做朋友》</a></strong></p>
+<li><p><strong>“时间”：<a href="http://www.zhibimo.com/books/xiaolai/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="noopener">《把时间当做朋友》</a></strong></p>
 </li>
-<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1478597520&amp;ver=1&amp;signature=0*gll64L7Vlks1qXOtZyV8fo4oqCNFQL98IfjiKQcfuTjAXlshHYviMFixGux86ehw2yaLkASR2wk6HsedmqfkRvr7sX2s90AEuiJF*FyECkzBQpmrsPg5uE35LtOE4ClRPsh*kIOifdyl012wbGSIvh84WtkehTYMjRuEK9f5M=" target="_blank" rel="external">《什么是财富自由》</a></strong></p>
+<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1478597520&amp;ver=1&amp;signature=0*gll64L7Vlks1qXOtZyV8fo4oqCNFQL98IfjiKQcfuTjAXlshHYviMFixGux86ehw2yaLkASR2wk6HsedmqfkRvr7sX2s90AEuiJF*FyECkzBQpmrsPg5uE35LtOE4ClRPsh*kIOifdyl012wbGSIvh84WtkehTYMjRuEK9f5M=" target="_blank" rel="noopener">《什么是财富自由》</a></strong></p>
 </li>
-<li><p><strong>“工作”：<a href="http://weisnc.com/2016/10/27/why-work/" target="_blank" rel="external">《重新理解工作的意义》</a></strong></p>
+<li><p><strong>“工作”：<a href="http://weisnc.com/2016/10/27/why-work/" target="_blank" rel="noopener">《重新理解工作的意义》</a></strong></p>
 </li>
-<li><p><strong>“活在未来”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A23.html" target="_blank" rel="external">《活在未来，而不是当下》</a></strong></p>
+<li><p><strong>“活在未来”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A23.html" target="_blank" rel="noopener">《活在未来，而不是当下》</a></strong></p>
 </li>
-<li><p><strong>“践行”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A02.html" target="_blank" rel="external">《最根本的学习与创作：践行 》</a></strong></p>
+<li><p><strong>“践行”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A02.html" target="_blank" rel="noopener">《最根本的学习与创作：践行 》</a></strong></p>
 </li>
-<li><p><strong>“逻辑”：<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter5.html" target="_blank" rel="external">《思考》</a></strong></p>
+<li><p><strong>“逻辑”：<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter5.html" target="_blank" rel="noopener">《思考》</a></strong></p>
 </li>
-<li><p><strong>“方法论”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A17.html" target="_blank" rel="external">《解决问题的方法论》</a></strong></p>
+<li><p><strong>“方法论”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A17.html" target="_blank" rel="noopener">《解决问题的方法论》</a></strong></p>
 </li>
-<li><p><strong>“吵架”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A13.html" target="_blank" rel="external">《我是如何做到不和老婆吵架的？》</a></strong></p>
+<li><p><strong>“吵架”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A13.html" target="_blank" rel="noopener">《我是如何做到不和老婆吵架的？》</a></strong></p>
 </li>
-<li><p><strong>“复利”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A01.html" target="_blank" rel="external">《人生最重要的概念：复利》</a></strong></p>
+<li><p><strong>“复利”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A01.html" target="_blank" rel="noopener">《人生最重要的概念：复利》</a></strong></p>
 </li>
-<li><p><strong>“概率”：<a href="https://zh.wikipedia.org/wiki/%E6%A6%82%E7%8E%87%E8%AE%BA" target="_blank" rel="external">《概率论》</a></strong></p>
+<li><p><strong>“概率”：<a href="https://zh.wikipedia.org/wiki/%E6%A6%82%E7%8E%87%E8%AE%BA" target="_blank" rel="noopener">《概率论》</a></strong></p>
 </li>
-<li><p><strong>“理财”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400176365&amp;idx=1&amp;sn=272edf2e18f5dfdbae8d8e00b1092175&amp;scene=20&amp;mpshare=1&amp;scene=23&amp;srcid=11080yxVQVQwVnD9hBiuMmh1#wechat_redirect" target="_blank" rel="external">《理财系列》</a></strong></p>
+<li><p><strong>“理财”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400176365&amp;idx=1&amp;sn=272edf2e18f5dfdbae8d8e00b1092175&amp;scene=20&amp;mpshare=1&amp;scene=23&amp;srcid=11080yxVQVQwVnD9hBiuMmh1#wechat_redirect" target="_blank" rel="noopener">《理财系列》</a></strong></p>
 </li>
-<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400875301&amp;idx=1&amp;sn=c5374f87d9676259f7f16d7b48c6ca0e&amp;scene=19#wechat_redirect" target="_blank" rel="external">《我是如何实现财富自由的》</a></strong></p>
+<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400875301&amp;idx=1&amp;sn=c5374f87d9676259f7f16d7b48c6ca0e&amp;scene=19#wechat_redirect" target="_blank" rel="noopener">《我是如何实现财富自由的》</a></strong></p>
 </li>
 </ul>
 <p>再有……</p>
@@ -910,17 +1059,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -934,6 +1083,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -946,12 +1099,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/27/hello-world/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/10/27/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -966,11 +1125,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/27/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2016/10/27/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -978,11 +1147,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-27T11:53:30+08:00">
-                2016-10-27
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2016-10-27 11:53:30" itemprop="dateCreated datePublished" datetime="2016-10-27T11:53:30+08:00">2016-10-27</time>
             
 
             
@@ -998,6 +1168,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/27/hello-world/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/10/27/hello-world/" itemprop="commentCount"></span>
                 </a>
@@ -1018,6 +1189,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1026,32 +1200,32 @@
       
         
           
-            <h2 id="本文留给Hexo"><a href="#本文留给Hexo" class="headerlink" title="本文留给Hexo"></a>本文留给Hexo</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h2 id="本文留给Hexo"><a href="#本文留给Hexo" class="headerlink" title="本文留给Hexo"></a>本文留给Hexo</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1065,6 +1239,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1077,12 +1255,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/27/why-work/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/10/27/why-work/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -1097,11 +1281,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/27/why-work/" itemprop="url">重新理解工作的意义</a></h1>
+                <a class="post-title-link" href="/2016/10/27/why-work/" itemprop="url">
+                  重新理解工作的意义
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1109,13 +1303,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-27T10:19:16+08:00">
-                2016-10-27
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-10-27 10:19:16" itemprop="dateCreated datePublished" datetime="2016-10-27T10:19:16+08:00">2016-10-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-03 21:04:12" itemprop="dateModified" datetime="2016-11-03T21:04:12+08:00">2016-11-03</time>
+              
             
           </span>
 
@@ -1129,6 +1340,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/27/why-work/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/10/27/why-work/" itemprop="commentCount"></span>
                 </a>
@@ -1149,6 +1361,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1157,7 +1372,7 @@
       
         
           
-            <h2 id="重新理解工作的意义"><a href="#重新理解工作的意义" class="headerlink" title="重新理解工作的意义"></a>重新理解工作的意义</h2><p>做为一名普通人，我一年大部分时间都在工作。但工作的意义是什么，人为什么要工作？知乎上有关于此的问答：<a href="https://www.zhihu.com/question/20398616" target="_blank" rel="external">人为什么要很努力地工作</a>  ，但感觉在行动上没有指导作用 。</p>
+            <h2 id="重新理解工作的意义"><a href="#重新理解工作的意义" class="headerlink" title="重新理解工作的意义"></a>重新理解工作的意义</h2><p>做为一名普通人，我一年大部分时间都在工作。但工作的意义是什么，人为什么要工作？知乎上有关于此的问答：<a href="https://www.zhihu.com/question/20398616" target="_blank" rel="noopener">人为什么要很努力地工作</a>  ，但感觉在行动上没有指导作用 。</p>
 <p>之前我也认为工作是一件很苦的事。赚钱就是为了生活、为了家人、为了社会认同、为了有一天我赚够了钱可以不工作。但是，我还没有赚够钱啊，难道我要在财富自由之前一直努力、坚持的工作？现在我们都知道，“努力、坚持”都是不存在的概念，当你要为一件事努力的时候，证明你骨子里不愿意做，事情注定做不成。现在我们也知道，当你决定做什么事的时候，想办法赋予它很多正面意义。那么，工作的意义在哪里，我调动我所有的元认知能力都没想明白。</p>
 <p>所幸，我看到一些很有思想的人，针对这个问题有不一样的见解：</p>
 <p><strong>工作的目的不仅仅是挣钱，还应该有更大的目标。</strong></p>
@@ -1227,17 +1442,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1251,6 +1466,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1261,9 +1480,6 @@
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1279,63 +1495,83 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466"
-               alt="weis" />
-          <p class="site-author-name" itemprop="name">weis</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466"
+                alt="weis" />
+            
+              <p class="site-author-name" itemprop="name">weis</p>
               <p class="site-description motion-element" itemprop="description">对所做的事情理解越深，你就会做的越好。</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
           
 
+          
+
+          
+
+          
+          
+
+          
           
 
           
             
-            
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
+          
           
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -1352,30 +1588,37 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16038740号-1</a></span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16038740号-1</a></span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-[object Object]"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">weis</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -1386,6 +1629,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -1406,7 +1651,6 @@
 
 
 
-  
 
 
 
@@ -1419,41 +1663,43 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
 
 
 
@@ -1462,22 +1708,18 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
   
 
+  
+    <script id="dsq-count-scr" src="https://weisnc.disqus.com/count.js" async></script>
+  
 
   
 
-    
-      <script id="dsq-count-scr" src="https://weisnc.disqus.com/count.js" async></script>
-    
-
-    
-
-  
 
 
 
@@ -1494,20 +1736,29 @@
 
 
 
+
+
+
+
+
+
+
   
 
 
 
 
 
-
-
+  
 
   
 
+  
 
+  
 
-
+  
+  
 
   
 

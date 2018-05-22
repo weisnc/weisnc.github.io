@@ -1,15 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -33,36 +49,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -71,36 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="共同成长," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
-<meta name="description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
-<meta name="keywords" content="共同成长">
-<meta property="og:type" content="article">
-<meta property="og:title" content="与你共同成长">
-<meta property="og:url" content="http://yoursite.com/2016/11/08/for-my-wife-first/index.html">
-<meta property="og:site_name" content="weisnc">
-<meta property="og:description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
-<meta property="og:updated_time" content="2016-11-15T09:28:18.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="与你共同成长">
-<meta name="twitter:description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
+
+
+
 
 
 
@@ -109,13 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -127,19 +103,42 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://yoursite.com/2016/11/08/for-my-wife-first/"/>
-
+  
 
 
 
+
+  <meta name="description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
+<meta name="keywords" content="共同成长">
+<meta property="og:type" content="article">
+<meta property="og:title" content="与你共同成长">
+<meta property="og:url" content="http://weisnc.com/2016/11/08/for-my-wife-first/index.html">
+<meta property="og:site_name" content="weisnc">
+<meta property="og:description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2016-11-15T09:28:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="与你共同成长">
+<meta name="twitter:description" content="近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化： 比如说“学习”之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，">
+
+
+
+
+
+
+  <link rel="canonical" href="http://weisnc.com/2016/11/08/for-my-wife-first/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>与你共同成长 | weisnc</title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
+
 
 
 
@@ -158,18 +157,43 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
+</head>
 
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -178,19 +202,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">weisnc</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -198,45 +220,34 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -244,12 +255,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -262,12 +284,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/08/for-my-wife-first/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weisnc.com/2016/11/08/for-my-wife-first/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weis">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="对所做的事情理解越深，你就会做的越好。">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466">
     </span>
 
@@ -280,11 +308,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">与你共同成长</h1>
+          <h1 class="post-title" itemprop="name headline">与你共同成长
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -292,13 +328,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-08T16:00:01+08:00">
-                2016-11-08
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-11-08 16:00:01" itemprop="dateCreated datePublished" datetime="2016-11-08T16:00:01+08:00">2016-11-08</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-15 17:28:18" itemprop="dateModified" datetime="2016-11-15T17:28:18+08:00">2016-11-15</time>
+              
             
           </span>
 
@@ -312,6 +365,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/11/08/for-my-wife-first/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2016/11/08/for-my-wife-first/" itemprop="commentCount"></span>
                 </a>
@@ -332,6 +386,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -340,38 +397,38 @@
       
         <p>近半年来，我们之间话变少了，因为实在不知道该怎么说。我说的话你不爱听，一言不合就叫我“别说了，我不喜欢”，而你说的话，放在半年前我可能还比较认同，但是现在，我的观念已经发生了一些变化：</p>
 <h4 id="比如说“学习”"><a href="#比如说“学习”" class="headerlink" title="比如说“学习”"></a><strong>比如说“学习”</strong></h4><p>之前我认为从学校出来后，基本上可以不用学习了。学习那是学生干的事，我都这么大了还在“学习”，那太丢人了，其实这样想是不对的。学习是一辈子的事，学习是为了成长，成长是为了个人价值的提升。只有不断地学习，才能学到更多的技能，掌握处理事情的方法论，完善自身的价值观，重新认识这个世界，摆脱浑浑噩噩的人生。这样人活着才有意义，否则，那和一只猴子有什么区别？</p>
-<p>参考：<br><a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter4.html" target="_blank" rel="external">《学习》</a><br><a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A24.html" target="_blank" rel="external">《为什么一定要自学？》</a></p>
+<p>参考：<br><a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter4.html" target="_blank" rel="noopener">《学习》</a><br><a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A24.html" target="_blank" rel="noopener">《为什么一定要自学？》</a></p>
 <h4 id="比如说“财富”"><a href="#比如说“财富”" class="headerlink" title="比如说“财富”"></a><strong>比如说“财富”</strong></h4><p>一个人最宝贵的财富是什么？是“注意力”。什么是财富我之前根本没思考过，以至于我有自我意识的二十五年来，浪费了无数的财富：玩游戏、看新闻、凑热闹、随大流、操别人的心……浪费的这些“注意力”要是全花费在自己身上，关注自身的成长，可能我们的生活比现在过得还要好吧。不过，现在也不晚，以后还有很长的路要走。</p>
 <h4 id="再比如说“阅读”"><a href="#再比如说“阅读”" class="headerlink" title="再比如说“阅读”"></a><strong>再比如说“阅读”</strong></h4><p>一个人大部分的知识都是通过阅读得来的。可以说是一个人成长的必要技能。如果一个家里书比较多，而且父母都是爱读书的人，那么小孩往往也爱读书，他将来成材的几率就会很大。孩子是父母的镜像，父母是什么样的人，孩子就更倾向于变成什么样的人。没必要要求孩子怎么样，要求孩子的同时，想一想我们做到了没有？如果没做到，我们先做到了再说，要成为孩子的榜样。所以，这就是我为什么要让我们阅读，不光是为了我们自己，更是为了孩子。</p>
 <p>还有:</p>
 <ul>
-<li><p><strong>“元认知能力”<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter1.html" target="_blank" rel="external">《醒悟》</a></strong></p>
+<li><p><strong>“元认知能力”<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter1.html" target="_blank" rel="noopener">《醒悟》</a></strong></p>
 </li>
-<li><p><strong>“概念”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A10.html" target="_blank" rel="external">《概念是一切知识的基石》</a></strong></p>
+<li><p><strong>“概念”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A10.html" target="_blank" rel="noopener">《概念是一切知识的基石》</a></strong></p>
 </li>
-<li><p><strong>“时间”：<a href="http://www.zhibimo.com/books/xiaolai/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="external">《把时间当做朋友》</a></strong></p>
+<li><p><strong>“时间”：<a href="http://www.zhibimo.com/books/xiaolai/ba-shi-jian-dang-zuo-peng-you" target="_blank" rel="noopener">《把时间当做朋友》</a></strong></p>
 </li>
-<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1478597520&amp;ver=1&amp;signature=0*gll64L7Vlks1qXOtZyV8fo4oqCNFQL98IfjiKQcfuTjAXlshHYviMFixGux86ehw2yaLkASR2wk6HsedmqfkRvr7sX2s90AEuiJF*FyECkzBQpmrsPg5uE35LtOE4ClRPsh*kIOifdyl012wbGSIvh84WtkehTYMjRuEK9f5M=" target="_blank" rel="external">《什么是财富自由》</a></strong></p>
+<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1478597520&amp;ver=1&amp;signature=0*gll64L7Vlks1qXOtZyV8fo4oqCNFQL98IfjiKQcfuTjAXlshHYviMFixGux86ehw2yaLkASR2wk6HsedmqfkRvr7sX2s90AEuiJF*FyECkzBQpmrsPg5uE35LtOE4ClRPsh*kIOifdyl012wbGSIvh84WtkehTYMjRuEK9f5M=" target="_blank" rel="noopener">《什么是财富自由》</a></strong></p>
 </li>
-<li><p><strong>“工作”：<a href="http://weisnc.com/2016/10/27/why-work/" target="_blank" rel="external">《重新理解工作的意义》</a></strong></p>
+<li><p><strong>“工作”：<a href="http://weisnc.com/2016/10/27/why-work/" target="_blank" rel="noopener">《重新理解工作的意义》</a></strong></p>
 </li>
-<li><p><strong>“活在未来”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A23.html" target="_blank" rel="external">《活在未来，而不是当下》</a></strong></p>
+<li><p><strong>“活在未来”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A23.html" target="_blank" rel="noopener">《活在未来，而不是当下》</a></strong></p>
 </li>
-<li><p><strong>“践行”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A02.html" target="_blank" rel="external">《最根本的学习与创作：践行 》</a></strong></p>
+<li><p><strong>“践行”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A02.html" target="_blank" rel="noopener">《最根本的学习与创作：践行 》</a></strong></p>
 </li>
-<li><p><strong>“逻辑”：<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter5.html" target="_blank" rel="external">《思考》</a></strong></p>
+<li><p><strong>“逻辑”：<a href="http://www.zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/Chapter5.html" target="_blank" rel="noopener">《思考》</a></strong></p>
 </li>
-<li><p><strong>“方法论”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A17.html" target="_blank" rel="external">《解决问题的方法论》</a></strong></p>
+<li><p><strong>“方法论”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A17.html" target="_blank" rel="noopener">《解决问题的方法论》</a></strong></p>
 </li>
-<li><p><strong>“吵架”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A13.html" target="_blank" rel="external">《我是如何做到不和老婆吵架的？》</a></strong></p>
+<li><p><strong>“吵架”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A13.html" target="_blank" rel="noopener">《我是如何做到不和老婆吵架的？》</a></strong></p>
 </li>
-<li><p><strong>“复利”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A01.html" target="_blank" rel="external">《人生最重要的概念：复利》</a></strong></p>
+<li><p><strong>“复利”：<a href="http://www.zhibimo.com/read/xiaolai/reborn-every-7-years/A01.html" target="_blank" rel="noopener">《人生最重要的概念：复利》</a></strong></p>
 </li>
-<li><p><strong>“概率”：<a href="https://zh.wikipedia.org/wiki/%E6%A6%82%E7%8E%87%E8%AE%BA" target="_blank" rel="external">《概率论》</a></strong></p>
+<li><p><strong>“概率”：<a href="https://zh.wikipedia.org/wiki/%E6%A6%82%E7%8E%87%E8%AE%BA" target="_blank" rel="noopener">《概率论》</a></strong></p>
 </li>
-<li><p><strong>“理财”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400176365&amp;idx=1&amp;sn=272edf2e18f5dfdbae8d8e00b1092175&amp;scene=20&amp;mpshare=1&amp;scene=23&amp;srcid=11080yxVQVQwVnD9hBiuMmh1#wechat_redirect" target="_blank" rel="external">《理财系列》</a></strong></p>
+<li><p><strong>“理财”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400176365&amp;idx=1&amp;sn=272edf2e18f5dfdbae8d8e00b1092175&amp;scene=20&amp;mpshare=1&amp;scene=23&amp;srcid=11080yxVQVQwVnD9hBiuMmh1#wechat_redirect" target="_blank" rel="noopener">《理财系列》</a></strong></p>
 </li>
-<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400875301&amp;idx=1&amp;sn=c5374f87d9676259f7f16d7b48c6ca0e&amp;scene=19#wechat_redirect" target="_blank" rel="external">《我是如何实现财富自由的》</a></strong></p>
+<li><p><strong>“财富自由”：<a href="http://mp.weixin.qq.com/s?__biz=MzAxNzI4MTMwMw==&amp;mid=400875301&amp;idx=1&amp;sn=c5374f87d9676259f7f16d7b48c6ca0e&amp;scene=19#wechat_redirect" target="_blank" rel="noopener">《我是如何实现财富自由的》</a></strong></p>
 </li>
 </ul>
 <p>再有……</p>
@@ -411,58 +468,59 @@
       
     </div>
 
-    <div>
-      
-        
-<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
     <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="weis wechat" style="width: 200px; max-width: 100%;"/>
     <div>如果喜欢我的文章，欢迎扫码关注我的微信公众号</div>
 </div>
 
+      </div>
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打赏作者</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>打赏作者</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/uploads/weixinpay.png" alt="weis WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/uploads/alipay.png" alt="weis Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-      
-        <div id="bitcoin" style="display: inline-block">
-          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="weis Bitcoin"/>
-          <p>Bitcoin打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/weixinpay.png" alt="weis 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.png" alt="weis 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="weis 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -474,7 +532,7 @@
       
 
       
-        
+      
       
 
       
@@ -502,6 +560,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -515,18 +577,18 @@
           </div>
           
 
-
-          
-  <div class="comments" id="comments">
-    
+  
+    <div class="comments" id="comments">
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
           <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
       </div>
-    
-  </div>
+    </div>
+
+  
+
 
 
         </div>
@@ -542,72 +604,92 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466"
-               alt="weis" />
-          <p class="site-author-name" itemprop="name">weis</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://avatars3.githubusercontent.com/u/8621713?v=3&s=466"
+                alt="weis" />
+            
+              <p class="site-author-name" itemprop="name">weis</p>
               <p class="site-description motion-element" itemprop="description">对所做的事情理解越深，你就会做的越好。</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
           
 
+          
+
+          
+
+          
+          
+
+          
           
 
           
             
-            
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
+          
           
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -640,30 +722,37 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16038740号-1</a></span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16038740号-1</a></span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-[object Object]"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">weis</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -674,6 +763,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -694,7 +785,6 @@
 
 
 
-  
 
 
 
@@ -707,81 +797,84 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
 
 
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
   
 
-    
-      <script id="dsq-count-scr" src="https://weisnc.disqus.com/count.js" async></script>
-    
+  
+    <script id="dsq-count-scr" src="https://weisnc.disqus.com/count.js" async></script>
+  
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2016/11/08/for-my-wife-first/';
-          this.page.identifier = '2016/11/08/for-my-wife-first/';
-          this.page.title = '与你共同成长';
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://weisnc.com/2016/11/08/for-my-wife-first/';
+        this.page.identifier = '2016/11/08/for-my-wife-first/';
+        this.page.title = '与你共同成长';
         };
+      function loadComments () {
         var d = document, s = d.createElement('script');
         s.src = 'https://weisnc.disqus.com/embed.js';
         s.setAttribute('data-timestamp', '' + +new Date());
         (d.head || d.body).appendChild(s);
-      </script>
-    
-
+      }
+      
+        loadComments();
+      
+    </script>
   
+
 
 
 
@@ -798,20 +891,29 @@
 
 
 
+
+
+
+
+
+
+
   
 
 
 
 
 
-
-
+  
 
   
 
+  
 
+  
 
-
+  
+  
 
   
 
